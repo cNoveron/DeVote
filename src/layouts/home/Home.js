@@ -12,8 +12,6 @@ class Home extends Component {
         <div className="pure-g">
           <div className="pure-u-1-1 header">
             <img src={logo} alt="delife-logo" />
-            <h1>Delife.io</h1>
-            <p>.</p>
 
             <br/><br/>
           </div>
@@ -145,7 +143,10 @@ class Home extends Component {
             <h3>setReferendumIndex</h3>
             <ContractForm 
               contract="DeVote" method="setReferendumIndex"
-              sendArgs={{from: anyone}} />
+              sendArgs={{from: anyone}} 
+              labels={
+                ['index']
+              } />  
             <p>
               <strong>referendumIndex</strong>: 
               <ContractData 

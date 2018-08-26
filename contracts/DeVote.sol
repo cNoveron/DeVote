@@ -143,11 +143,11 @@ contract DeVote{
     function getReferendumCount() public constant returns (uint) {
         return referendumCount;
     }
-    function setReferendumIndex(uint index) public constant returns (uint) {
-        return referendumCount;
+    function setReferendumIndex(uint index) public{
+        referendumIndex = index;
     }
     uint public referendumIndex;
-    
+
 
     function addOption(string option) public chairpersonOnly{
         referendum_fromID[referendumCount].option_fromID[referendum_fromID[referendumCount].optionCount] = Option(option, 0);
